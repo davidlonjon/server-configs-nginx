@@ -9,5 +9,4 @@ accessible, if needed, even cross-domain.
 
 ## Documentation
 
-
-[documentation](doc/TOC.md)
+[documentation](doc/usage.md)

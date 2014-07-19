@@ -1,5 +1,4 @@
-[Nginx Server Configs homepage](https://github.com/h5bp/server-configs-nginx)
- | [Documentation table of contents](TOC.md)
+[Nginx Server Configs homepage] (https://github.com/davidlonjon/server-configs-nginx)
 
 # Usage
 
@@ -27,7 +26,7 @@ To use directly, replace the nginx config directory with this repository. for ex
     /etc/init.d/nginx stop
     cd /etc
     mv nginx nginx-previous
-    git clone git@github.com:h5bp/server-configs-nginx.git nginx
+    git clone git@github.com:davidlonjon/server-configs-nginx.git
     # install-specific edits
     /etc/init.d/nginx start
 
