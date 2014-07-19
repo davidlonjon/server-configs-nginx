@@ -7,10 +7,10 @@ server {
   listen 80;
 
   # listen on the www host
-  server_name www.example.com;
+  server_name www.wordpress-example.com;
 
   # and redirect to the non-www host (declared below)
-  return 301 $scheme://example.com$request_uri;
+  return 301 $scheme://wordpress-example.com$request_uri;
 }
 
 server {
@@ -19,7 +19,7 @@ server {
   listen 80;
 
   # The host name to respond to
-  server_name example.com;
+  server_name wordpress-example.com;
 
   # Supporting or forcing SSL?
   #listen 443 ssl;
@@ -28,19 +28,19 @@ server {
   #ssl_certificate_key /etc/nginx/certs/server.key;
 
   #Parameterization using hostname of access and log filenames.
-  access_log /var/log/nginx/example.com_access.log;
+  access_log /var/log/nginx/wordpress-example.com_access.log;
   # Could also specifically only log humans request and bots requests
-  # access_log /var/log/nginx/example.com_access.log main if=!$bot_ua;
+  # access_log /var/log/nginx/wordpress-example.com_access.log main if=!$bot_ua;
   # Log bots?
-  # access_log /var/log/nginx/example.com_access.bots.log main if=$bot_ua;
+  # access_log /var/log/nginx/wordpress-example.com_access.bots.log main if=$bot_ua;
   # to boost IO on HDD we can disable access logs
   # access_log off;
 
   # Error logging (log levels: debug, info, notice, warn, error, crit, alert, emerg)
-  error_log /var/log/nginx/example.com_error.log warn;
+  error_log /var/log/nginx/wordpress-example.com_error.log warn;
 
   # Path for root files
-  root /sites/example.com/public;
+  root /sites/wordpress-example.com/public;
 
   # Index files
   index index.php;
@@ -134,7 +134,7 @@ server {
 
   # This is a sample for stopping hotlinking.
   # location ~ \.(jpe?g|png|gif)$ {
-  #      valid_referers none blocked example.com *.example.com;
+  #      valid_referers none blocked wordpress-example.com *.wordpress-example.com;
   #      if ($invalid_referer) {
   #         return   403;
   #     }

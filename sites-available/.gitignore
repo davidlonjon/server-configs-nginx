@@ -1,5 +1,6 @@
 *
 !.gitignore
 !no-default
-!example.conf
+!example.com
+!wordpress-example.com
 !README.md
