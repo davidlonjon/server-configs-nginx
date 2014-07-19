@@ -11,5 +11,6 @@ server {
   access_log off;
   log_not_found off;
   listen 80 default_server;
+  # server_name_in_redirect off;
   return 444;
 }
