@@ -1,0 +1,5 @@
+*
+!.gitignore
+!no-default
+!example.conf
+!README.md
