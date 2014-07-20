@@ -26,7 +26,7 @@ To use directly, replace the nginx config directory with this repository. for ex
     /etc/init.d/nginx stop
     cd /etc
     mv nginx nginx-previous
-    git clone git@github.com:davidlonjon/server-configs-nginx.git
+    git clone git@github.com:davidlonjon/server-configs-nginx.git nginx
     # install-specific edits
     /etc/init.d/nginx start
 
