@@ -96,7 +96,7 @@ server {
   fastcgi_read_timeout 10;
 
   # Default location /
-  include h5bp/locations/default.conf;
+  include h5bp/location/default.conf;
 
   # Enable clickjacking protection in modern browsers
   # Available in IE8 also
