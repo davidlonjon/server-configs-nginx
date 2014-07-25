@@ -27,6 +27,8 @@ To use directly, replace the nginx config directory with this repository. for ex
     cd /etc
     mv nginx nginx-previous
     git clone git@github.com:davidlonjon/server-configs-nginx.git nginx
+    or sudo SSH_AUTH_SOCK=$SSH_AUTH_SOCK git clone git@github.com:davidlonjon/server-configs-nginx.git nginx
+    if you cannot git clone under sudo
     # install-specific edits
     /etc/init.d/nginx start
 
