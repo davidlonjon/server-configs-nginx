@@ -112,7 +112,8 @@ server {
   include h5bp/directive-only/x-content-type-options.conf;
 
   # Enable Content Security Policy (CSP)
-  include h5bp/directive-only/content-security-policy.conf;
+  # If you include you need to make sure to allow the domain in the security policy definition
+  #include h5bp/directive-only/content-security-policy.conf;
 
   # Enable Built-in filename-based cache busting (Read inside conf file)
   include h5bp/location/cache-busting.conf;
