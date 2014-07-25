@@ -40,7 +40,7 @@ server {
   error_log /var/log/nginx/wordpress-example.com_error.log warn;
 
   # Path for root files
-  root /sites/wordpress-example.com/public;
+  root /srv/www/wordpress-example.com/current;
 
   # Index files
   index index.php;
