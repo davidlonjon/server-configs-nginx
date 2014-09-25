@@ -32,8 +32,7 @@ To use directly, replace the nginx config directory with this repository. for ex
     # install-specific edits
     /etc/init.d/nginx start
 
-Install specific edits will vary from server to user, see [Getting started](getting-started.md)
-for a description of the required steps.
+Install specific edits will vary from server to user.
 
 ## Basic structure
 
