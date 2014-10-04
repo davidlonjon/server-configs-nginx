@@ -1,5 +1,9 @@
 [Nginx Server Configs homepage] (https://github.com/davidlonjon/server-configs-nginx)
 
+# Note
+This is a fork from [Nginx HTTP server boilerplate configs](https://github.com/h5bp/server-configs-nginx)
+and has deviated quite a bit.
+
 # Usage
 
 ## Requirements
@@ -23,17 +27,21 @@ incorporating the desired functionality from this repository.
 
 To use directly, replace the nginx config directory with this repository. for example:
 
+    # Stop nginx
     /etc/init.d/nginx stop
+    # Backup current Nginx config
     cd /etc
     mv nginx nginx-previous
+    # Clone nginx
     git clone git@github.com:davidlonjon/server-configs-nginx.git nginx
     or sudo SSH_AUTH_SOCK=$SSH_AUTH_SOCK git clone git@github.com:davidlonjon/server-configs-nginx.git nginx
     if you cannot git clone under sudo
     # install-specific edits
+    # Start nginx
     /etc/init.d/nginx start
 
-Install specific edits will vary from server to user, see [Getting started](getting-started.md)
-for a description of the required steps.
+Install specific edits will vary from server to user, see [Getting started from the original repo](https://github.com/h5bp/server-configs-nginx/blob/master/doc/getting-started.md)
+to get an idea for a description of the required steps. They might not full apply to this repo
 
 ## Basic structure
 
@@ -56,18 +64,17 @@ Below is a general description of each section
 ### h5bp
 
 This directory contains config snippets (mixins) to be included as desired.
-There is more information available about the individual files in
-[About h5bp](h5bp.md).
+
 
 ### sites-available
 
 This directory should contain all of the server definitions that are available
-for use. [About sites-available](sites-available.md).
+for use.
 
 ### sites-enabled
 
 This directory should contain only symlinks to enable a specific `sites-available`
-server. [About sites-enabled](sites-enabled.md).
+server.
 
 ### mime.types
 
@@ -75,4 +82,4 @@ The mime.types file is responsible for mapping file extensions to mime types.
 
 ### nginx.conf
 
-The main nginx config file. [About nginx.conf](nginx-conf.md).
+The main nginx config file.
