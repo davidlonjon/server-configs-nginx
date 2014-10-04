@@ -2,5 +2,6 @@
 !.gitignore
 !cpip.conf
 !php_cache.conf
+!rps1.conf
 !rps10.conf
 !rps20.conf
