@@ -22,9 +22,9 @@ NGINX_INIT='/etc/init.d/nginx'
 PHP_FPM_INIT='/etc/init.d/php5-fpm'
 WP_VHOST_TEMPLATE='/etc/nginx/templates/wordpress-example.com.template'
 PHP_FPM_POOL_TEMPLATE='/etc/nginx/templates/pool.conf.template'
-FPM_SERVERS_DEFAULT = '2'
-MIN_SERVERS_DEFAULT = '1'
-MAX_SERVERS_DEFAULT = '3'
+FPM_SERVERS_DEFAULT='2'
+MIN_SERVERS_DEFAULT='1'
+MAX_SERVERS_DEFAULT='3'
 
 # --------------END
 SED=`which sed`
