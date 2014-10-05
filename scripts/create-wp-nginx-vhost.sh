@@ -85,7 +85,7 @@ if [ -z "$MAX_SERVERS" ]; then
     MAX_SERVERS=MAX_SERVERS_DEFAULT
 fi
 # Now we need to create a new php fpm pool config
-FPMCONF="$PHP_INI_DIR/$DOMAIN.pool.conf"
+FPMCONF="$PHP_INI_DIR/$DOMAIN.conf"
 
 cp $PHP_FPM_POOL_TEMPLATE $FPMCONF
 
