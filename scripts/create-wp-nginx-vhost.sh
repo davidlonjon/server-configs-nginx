@@ -72,17 +72,17 @@ $SED -i "s#@@SOCKET@@#/var/run/"$USERNAME"_fpm.sock#g" $CONFIG
 echo "How many FPM servers would you like (Press enter for default: $FPM_SERVERS_DEFAULT):"
 read FPM_SERVERS
 if [ -z "$FPM_SERVERS" ]; then
-    FPM_SERVERS = FPM_SERVERS_DEFAULT
+    FPM_SERVERS=FPM_SERVERS_DEFAULT
 fi
 echo "Min number of FPM servers would you like (Press enter for default: $MIN_SERVERS_DEFAULT):"
 read MIN_SERVERS
 if [ -z "$MIN_SERVERS" ]; then
-    MIN_SERVERS = MIN_SERVERS_DEFAULT
+    MIN_SERVERS=MIN_SERVERS_DEFAULT
 fi
 echo "Max number of FPM servers would you like (Press enter for default: $MAX_SERVERS_DEFAULT):"
 read MAX_SERVERS
 if [ -z "$MAX_SERVERS" ]; then
-    MAX_SERVERS = MAX_SERVERS_DEFAULT
+    MAX_SERVERS=MAX_SERVERS_DEFAULT
 fi
 # Now we need to create a new php fpm pool config
 FPMCONF="$PHP_INI_DIR/$DOMAIN.pool.conf"
