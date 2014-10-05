@@ -113,7 +113,7 @@ chmod 700 /home/$HOME_DIR/_sessions
 chmod 770 /home/$HOME_DIR/_logs
 chmod 750 /home/$HOME_DIR$PUBLIC_HTML_DIR
 chown $USERNAME:$USERNAME /home/$HOME_DIR/ -R
-chown $USERNAME:$WEB_SERVER_GROUP /home/$HOME_DIR$PUBLIC_HTML_DIR -R
+chown $USERNAME:$WEB_SERVER_GROUP /home/$HOME_DIR/public_html -R
 
 $NGINX_INIT reload
 $PHP_FPM_INIT restart
