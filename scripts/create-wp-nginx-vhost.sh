@@ -94,7 +94,9 @@ $SED -i "s/@@HOME_DIR@@/\/home\/$USERNAME/g" $FPMCONF
 $SED -i "s/@@START_SERVERS@@/$FPM_SERVERS/g" $FPMCONF
 $SED -i "s/@@MIN_SERVERS@@/$MIN_SERVERS/g" $FPMCONF
 $SED -i "s/@@MAX_SERVERS@@/$MAX_SERVERS/g" $FPMCONF
-MAX_CHILDS=$((MAX_SERVERS+START_SERVERS))
+# The computation of MAX_CHILDS seems to be a problem
+# TODO: Test and fix
+MAX_CHILDS=$((MAX_SERVERS+FPM_SERVERS))
 $SED -i "s/@@MAX_CHILDS@@/$MAX_CHILDS/g" $FPMCONF
 
 usermod -aG $USERNAME $WEB_SERVER_GROUP
@@ -119,4 +121,6 @@ $NGINX_INIT reload
 $PHP_FPM_INIT restart
 
 echo -e "\nSite Created for $DOMAIN with PHP support"
+echo -e "\nDo not forget to add $USERNAME to the AllowUsers in /etc/ssh/sshd_config"
+
 
